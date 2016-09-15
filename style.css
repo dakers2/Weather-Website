@@ -17,17 +17,12 @@ body {
 	transition: .8s;
 }
 
-#table td {
-	width: 130px;
-	text-align: center;
-}
-
-#day {
+.day {
 	font-size: 16px;
 	font-weight: bold;
 }
 
-#date {
+.date {
 	font-size: 12px;
 	font-style: italic;
 }
@@ -35,4 +30,10 @@ body {
 #container {
 	width: 90%;
 	margin: 0 auto;
+}
+
+.weather-box {
+	text-align: center;
+	width: 130px;
+	float: left;
 }

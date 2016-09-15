@@ -16,10 +16,14 @@ $(document).ready(function(){
 			var path = w.query.results.channel.item.forecast;
 		
 			$(path).each (function(index, value){
-				$("#date").append("<div>" + value.date + "</div>"); 
-				$("#day").append("<div>" + value.day + "</div>");
-				$("#temp").append("<div>" + value.high + "/" + value.low + "</div>");
-				$("#cond").append("<div>" + value.text + "</div>"); 
+				var container = $("#weather-container");
+				container.append("<div class='weather-box'></div>");
+				var box = container.children().last();
+				box.append("<div class='day'>" + value.day + "</div>");
+				box.append("<div>" + value.date + "</div>"); 
+				box.append("<div>" + value.day + "</div>");
+				box.append("<div>" + value.high + "/" + value.low + "</div>");
+				box.append("<div>" + value.text + "</div>");
 			});	
 		});
 			return false;
@@ -40,15 +44,14 @@ $(document).ready(function(){
 		w.query.results.channel.item.forecast.forEach (function(index){
 			$("#cond").append("<td>" + index.text + "</td>"); 
 		});
+
+
+			var path = w.query.results.channel.item.forecast;
 		
-		
-		
-		var path = w.query.results.channel.item.forecast;
-		
-		$(path).each (function(index){
-			$("#date").append("<td>" + index.date + "</td>"); 
-			$("#day").append("<td>" + index.day + "</td>");
-			$("#temp").append("<td>" + index.high + "/" + index.low + "</td>");
-			$("#cond").append("<td>" + index.text + "</td>"); 
-		});
+			$(path).each (function(index, value){
+				$("#date").append("<div>" + value.date + "</div>"); 
+				$("#day").append("<div>" + value.day + "</div>");
+				$("#temp").append("<div>" + value.high + "/" + value.low + "</div>");
+				$("#cond").append("<div>" + value.text + "</div>"); 
+			});		
 */
