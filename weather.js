@@ -13,19 +13,14 @@ $(document).ready(function(){
 			$("#cond").empty();
 				
 				
-			w.query.results.channel.item.forecast.forEach (function(index){
-				$("#date").append("<td>" + index.date + "</td>"); 
-			});
-			w.query.results.channel.item.forecast.forEach (function(index){
-				$("#day").append("<td>" + index.day + "</td>");
-			});
-			w.query.results.channel.item.forecast.forEach (function(index){
-				$("#temp").append("<td>" + index.high + "/" + index.low + "</td>");
-			});
-			w.query.results.channel.item.forecast.forEach (function(index){
-				$("#cond").append("<td>" + index.text + "</td>"); 
-			});
-				
+			var path = w.query.results.channel.item.forecast;
+		
+			$(path).each (function(index, value){
+				$("#date").append("<div>" + value.date + "</div>"); 
+				$("#day").append("<div>" + value.day + "</div>");
+				$("#temp").append("<div>" + value.high + "/" + value.low + "</div>");
+				$("#cond").append("<div>" + value.text + "</div>"); 
+			});	
 		});
 			return false;
 	});

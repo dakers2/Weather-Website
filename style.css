@@ -17,10 +17,6 @@ body {
 	transition: .8s;
 }
 
-.title {
-	text-align: left;
-}
-
 #table td {
 	width: 130px;
 	text-align: center;
