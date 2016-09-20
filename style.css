@@ -27,13 +27,50 @@ body {
 	font-style: italic;
 }
 
+.cond {
+	font-size: 14px;
+}
+
 #container {
 	width: 90%;
 	margin: 0 auto;
+    height: 300px;
 }
 
 .weather-box {
-	text-align: center;
-	width: 130px;
-	float: left;
+    color: #fff;
+    background-color: #1978FF;
+    text-align: center;
+    width: 120px;
+    height: 150px;
+    float: left;
+    margin-bottom: 10px;
+    border: 2px solid #1978FF;
+    border-radius: 3px;
+    margin-right: 5px;
 }
+
+.weather-box img {
+    height: 50px;
+}
+
+footer {
+    width: 90%;
+    margin: 0 auto;
+}
+
+footer p {
+    font-size: 10px;
+    color: gray;
+}
+
+/*
+#weather-container {
+    overflow: scroll;
+    overflow-y: hidden;
+}
+
+add media query to fix scrollbar issue
+
+
+*/
